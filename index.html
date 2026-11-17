@@ -236,6 +236,10 @@ form .btn{width:100%;padding:17px}
 .pcard select{min-height:46px;padding:10px 12px}
 .pk-note{margin-top:22px;color:var(--muted);font-size:.93rem}
 
+.pgroup{margin-bottom:52px}
+.pgroup .gt{font:700 1.6rem/1.3 var(--display);color:var(--petrol);display:flex;align-items:center;gap:14px}
+.pgroup .gt::after{content:"";flex:1;height:2px;background:var(--line);border-radius:2px}
+.pgroup .gs{color:var(--muted);margin:2px 0 18px;font-size:.98rem}
 /* ===== Follow-up (reports) ===== */
 .follow{background:#fff;border-block:1px solid var(--line)}
 .follow-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
@@ -523,13 +527,8 @@ body.tmode>header,body.tmode>main,body.tmode>footer,body.tmode>.fab,body.tmode>.
 
   <section id="packages">
     <div class="wrap">
-      <div class="sec-head"><h2>الباقات</h2><p>اختر نوع الباقة، ثم المرحلة وعدد الحصص الشهرية. مدة الحصة 60 دقيقة.</p></div>
-      <div class="tabs" role="tablist" aria-label="نوع الباقة">
-        <button role="tab" id="t-live" aria-selected="true" aria-controls="panel">حصص مباشرة</button>
-        <button role="tab" id="t-nahw" aria-selected="false" aria-controls="panel">النحو</button>
-        <button role="tab" id="t-rec" aria-selected="false" aria-controls="panel">فيديوهات مسجّلة</button>
-      </div>
-      <div id="panel" role="tabpanel" class="pk-grid" aria-live="polite"></div>
+      <div class="sec-head"><h2>الباقات</h2><p>كل الباقات هنا: اختر المرحلة وعدد الحصص الشهرية، أو اطلب الفيديوهات المسجّلة. مدة الحصة 60 دقيقة.</p></div>
+      <div id="panel"></div>
       <p class="pk-note">الأسعار تُحدَّد حسب الباقة، اضغط "اطلب الباقة" وسنرد عليك على واتساب بالتفاصيل.</p>
     </div>
   </section>
@@ -636,7 +635,7 @@ body.tmode>header,body.tmode>main,body.tmode>footer,body.tmode>.fab,body.tmode>.
       <div><h4>روابط</h4><ul><li><a href="#about">عني</a></li><li><a href="#packages">الباقات</a></li><li><a href="#book">احجز حصة تجريبية</a></li><li><a href="#teacher">لوحة المعلمة</a></li></ul></div>
       <div><h4>تواصل</h4><ul><li><a href="https://wa.me/201069257145" target="_blank" rel="noopener">واتساب: <span dir="ltr">+20 106 925 7145</span></a></li></ul></div>
     </div>
-    <div class="f-bottom"><span>© 2026 نورا سامي. جميع الحقوق محفوظة.</span><span>صُنع بواسطة <a href="https://academito.online" rel="noopener" style="color:var(--light)">أكاديميتو</a></span></div>
+    <div class="f-bottom"><span>© 2026 نورا سامي. جميع الحقوق محفوظة.</span></div>
   </div>
 </footer>
 
@@ -871,10 +870,13 @@ const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=nu
 function liveFeats(n){
   return [n===8?"حصتان أسبوعيًا (8 حصص في الشهر)":"3 حصص أسبوعيًا (12 حصة في الشهر)","60 دقيقة للحصة","تقرير لولي الأمر بعد كل حصة","تقرير أسبوعي وشهري"];
 }
+const GROUPS=[["live","حصص مباشرة","مع المعلمة مباشرة، 60 دقيقة للحصة"],["nahw","النحو","تأسيس من الصفر أو شرح للمنهج حسب سنتك الدراسية"],["rec","فيديوهات مسجّلة","تعلّم في الوقت المناسب لك مع تدريبات ومتابعة واختبارات"]];
 function renderPacks(){
-  const panel=$("panel");panel.innerHTML="";
-  const list=PACKS.filter(p=>p.tab===state.tab);
-  panel.className="pk-grid"+(list.length===1?" one":list.length===2?" two":"");
+  const root=$("panel");root.innerHTML="";
+  GROUPS.forEach(([k,gt,gs])=>{
+  const g=el("div","pgroup");g.appendChild(el("h3","gt",gt));g.appendChild(el("p","gs",gs));
+  const list=PACKS.filter(p=>p.tab===k);
+  const panel=el("div","pk-grid"+(list.length===1?" one":list.length===2?" two":""));
   list.forEach(p=>{
     const n=state.n[p.id]||8;
     const c=el("article","pcard");
@@ -915,6 +917,8 @@ function renderPacks(){
     c.appendChild(btn);
     panel.appendChild(c);
   });
+  g.appendChild(panel);root.appendChild(g);
+  });
 }
 function requestPack(p,n,grade){
   const prog=$("program");
@@ -935,11 +939,6 @@ function requestPack(p,n,grade){
   });
   $("grade").insertAdjacentHTML("beforeend",GRADES.map(g=>`<option>${g}</option>`).join(""));
 })();
-document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{
-  state.tab=b.id.replace("t-","");
-  document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));
-  renderPacks();
-}));
 renderPacks();
 
 // ===== نماذج التقارير =====
