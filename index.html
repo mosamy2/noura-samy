@@ -204,6 +204,71 @@ form .btn{width:100%;padding:17px}
 .success h3{font:700 1.5rem var(--display);color:var(--petrol)}
 .success p{color:var(--muted);margin-top:6px}
 
+
+/* ===== Packages v2 ===== */
+.tabs{display:inline-flex;gap:6px;padding:6px;background:var(--mist);border-radius:999px;margin-bottom:34px;flex-wrap:wrap}
+.tabs button{font:600 .98rem var(--body);border:0;background:transparent;color:var(--petrol);padding:11px 22px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
+.tabs button:hover{background:rgba(18,56,74,.08)}
+.tabs button[aria-selected="true"]{background:var(--petrol);color:#fff}
+.pk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pk-grid.two{grid-template-columns:repeat(2,1fr)}
+.pk-grid.one{grid-template-columns:minmax(0,760px)}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:30px 28px;display:flex;flex-direction:column;gap:14px;position:relative;transition:box-shadow .3s,border-color .3s}
+.pcard:hover{box-shadow:0 26px 40px -28px rgba(18,56,74,.45);border-color:#9DC3C1}
+.pcard h3{font:700 1.55rem/1.35 var(--display);color:var(--petrol)}
+.pcard .pname{font-weight:600;font-size:.92rem;color:#8A5E00;background:var(--light-soft);display:inline-block;padding:3px 12px;border-radius:999px;align-self:flex-start}
+.pcard p.d{color:var(--muted);font-size:.98rem;line-height:1.7}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--mist);border-radius:14px;padding:4px;gap:4px}
+.seg button{font:600 .95rem var(--body);border:0;background:transparent;color:var(--petrol);padding:10px 8px;border-radius:10px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:#fff;box-shadow:0 2px 8px rgba(18,56,74,.18)}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.meta span{background:var(--mist);color:var(--petrol);border-radius:10px;padding:5px 12px;font-size:.9rem;font-weight:500}
+.feat{list-style:none;display:grid;gap:8px;font-size:.96rem}
+.feat li{display:flex;gap:10px;align-items:flex-start}
+.feat svg{width:20px;height:20px;color:#1F8F6B;flex:none;margin-top:4px}
+.pprice{margin-top:auto;padding-top:10px;display:flex;align-items:baseline;gap:8px;font-weight:700;color:var(--petrol);font-size:1.15rem}
+.pprice small{font-weight:500;color:var(--muted);font-size:.9rem}
+.pcard .btn{width:100%}
+.opt-row{display:flex;flex-wrap:wrap;gap:8px}
+.opt-row button{font:500 .93rem var(--body);border:1.5px solid var(--line);background:#fff;color:var(--petrol);border-radius:999px;padding:8px 16px;cursor:pointer}
+.opt-row button[aria-pressed="true"]{background:var(--petrol);border-color:var(--petrol);color:#fff}
+.pcard label.sm{font-size:.88rem;margin:0;color:var(--muted);font-weight:500}
+.pcard select{min-height:46px;padding:10px 12px}
+.pk-note{margin-top:22px;color:var(--muted);font-size:.93rem}
+
+/* ===== Follow-up (reports) ===== */
+.follow{background:#fff;border-block:1px solid var(--line)}
+.follow-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.rep-switch{display:grid;gap:12px;margin-top:28px}
+.rep-btn{color:var(--ink);text-align:start;font:inherit;background:var(--paper);border:1.5px solid var(--line);border-radius:var(--r-md);padding:16px 18px;cursor:pointer;display:flex;gap:14px;align-items:center;transition:border-color .2s,background .2s,transform .2s}
+.rep-btn:hover{border-color:#9DC3C1}
+.rep-btn[aria-pressed="true"]{background:var(--petrol);border-color:var(--petrol);color:#fff}
+.rep-btn .ri{flex:none;width:44px;height:44px;border-radius:12px;background:var(--mist);color:var(--petrol);display:grid;place-items:center;font-size:1.3rem}
+.rep-btn[aria-pressed="true"] .ri{background:rgba(255,255,255,.14);color:var(--light)}
+.rep-btn strong{display:block;font-weight:600}
+.rep-btn span.s{font-size:.92rem;color:var(--muted)}
+.rep-btn[aria-pressed="true"] span.s{color:#B9D3DB}
+.phone-mock{width:min(360px,100%);margin-inline:auto;border-radius:38px;background:#10202A;padding:12px;box-shadow:0 40px 60px -30px rgba(18,56,74,.6);transform:rotateY(-8deg) rotateX(3deg);transition:transform .5s}
+.phone-mock:hover{transform:none}
+.screen{border-radius:28px;overflow:hidden;background:#EFE6DB;display:flex;flex-direction:column;min-height:520px}
+.wa-head{background:#0B6B5D;color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.wa-av{width:38px;height:38px;border-radius:50%;background:var(--light);color:var(--ink);display:grid;place-items:center;font:700 1.2rem var(--display)}
+.wa-head b{display:block;font-size:.98rem;line-height:1.3}
+.wa-head small{opacity:.8;font-size:.78rem}
+.chat{padding:16px 14px;flex:1;display:flex;flex-direction:column;gap:8px;justify-content:flex-end}
+.bubble{background:#fff;border-radius:4px 14px 14px 14px;padding:12px 14px 8px;box-shadow:0 1px 1px rgba(0,0,0,.12);font-size:.88rem;line-height:1.85;white-space:pre-line;max-width:100%;animation:bin .4s ease}
+.bubble time{display:block;text-align:end;color:#8696A0;font-size:.7rem;margin-top:2px}
+.demo-tag{text-align:center;font-size:.74rem;color:#6B7C85;margin-bottom:4px}
+@keyframes bin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.bubble{animation:none}}
+@media (max-width:900px){
+  .pk-grid,.pk-grid.two{grid-template-columns:1fr}
+  .follow-grid{grid-template-columns:1fr;gap:34px}
+  .phone-mock{transform:none}
+  .tabs{display:flex;width:100%}
+  .tabs button{flex:1;padding:11px 8px;font-size:.9rem}
+}
+
 /* Footer */
 footer{background:var(--ink);color:#B7CCD4;padding:56px 0 28px}
 .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
@@ -250,6 +315,7 @@ footer a:hover{color:var(--light)}
         <li><a href="#about">عني</a></li>
         <li><a href="#how">كيف نبدأ</a></li>
         <li><a href="#packages">الباقات</a></li>
+        <li><a href="#followup">المتابعة</a></li>
         <li><a href="#contact">تواصل معي</a></li>
       </ul>
     </nav>
@@ -262,7 +328,7 @@ footer a:hover{color:var(--light)}
     </div>
   </div>
   <div class="drawer" id="drawer">
-    <a href="#about">عني</a><a href="#how">كيف نبدأ</a><a href="#packages">الباقات</a><a href="#contact">تواصل معي</a>
+    <a href="#about">عني</a><a href="#how">كيف نبدأ</a><a href="#packages">الباقات</a><a href="#followup">المتابعة</a><a href="#contact">تواصل معي</a>
     <a href="https://academito.online" rel="noopener">تسجيل الدخول</a>
     <a class="btn btn-primary" href="#book">احجزي حصتك التجريبية</a>
   </div>
@@ -329,24 +395,33 @@ footer a:hover{color:var(--light)}
   </section>
 
   <section id="packages">
-    <div class="wrap packages-3d">
-      <div class="sec-head"><h2>الباقات</h2></div>
-      <div class="package tilt" data-tilt="7">
-        <div class="pk-main">
-          <span class="pk-tag">8 حصص شهريًا</span>
-          <h3>تأسيس نور البيان</h3>
-          <p>برنامج منتظم يبني أساس القراءة والكتابة والنطق بالعربية بحصتين أسبوعيًا.</p>
-          <ul class="pk-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>8 حصص في الشهر</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>حصتان أسبوعيًا</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>مدة الحصة 60 دقيقة</li>
-          </ul>
+    <div class="wrap">
+      <div class="sec-head"><h2>الباقات</h2><p>اختر نوع الباقة، ثم المرحلة وعدد الحصص الشهرية. مدة الحصة 60 دقيقة.</p></div>
+      <div class="tabs" role="tablist" aria-label="نوع الباقة">
+        <button role="tab" id="t-live" aria-selected="true" aria-controls="panel">حصص مباشرة</button>
+        <button role="tab" id="t-nahw" aria-selected="false" aria-controls="panel">النحو</button>
+        <button role="tab" id="t-rec" aria-selected="false" aria-controls="panel">فيديوهات مسجّلة</button>
+      </div>
+      <div id="panel" role="tabpanel" class="pk-grid" aria-live="polite"></div>
+      <p class="pk-note">الأسعار تُحدَّد حسب الباقة، اضغط "اطلب الباقة" وسنرد عليك على واتساب بالتفاصيل.</p>
+    </div>
+  </section>
+
+  <section id="followup" class="follow">
+    <div class="wrap follow-grid">
+      <div>
+        <div class="sec-head" style="margin-bottom:0"><h2>متابعة تصل إلى ولي الأمر</h2><p>بعد كل حصة وكل أسبوع وكل شهر، يصلك تقرير مكتوب على واتساب، فتعرف أين وصل طفلك دون أن تسأل.</p></div>
+        <div class="rep-switch" role="group" aria-label="نوع التقرير">
+          <button class="rep-btn" data-r="session" aria-pressed="true"><span class="ri">📘</span><div><strong>تقرير الحصة</strong><span class="s">بعد كل حصة: الحضور، مستوى الطالب، الواجب</span></div></button>
+          <button class="rep-btn" data-r="week" aria-pressed="false"><span class="ri">🗓️</span><div><strong>تقرير الأسبوع</strong><span class="s">ملخص الحضور والواجبات وما تم شرحه</span></div></button>
+          <button class="rep-btn" data-r="month" aria-pressed="false"><span class="ri">📈</span><div><strong>تقرير الشهر</strong><span class="s">تطور المستوى وما أتقنه الطالب وخطة الشهر القادم</span></div></button>
         </div>
-        <div class="pk-side"><div class="lift">
-          <small>السعر</small>
-          <div class="price">0<span>ج.م</span></div>
-          <a class="btn btn-primary" href="#book">احجز حصتك التجريبية</a>
-        </div></div>
+      </div>
+      <div class="phone-mock" aria-label="مثال لتقرير على واتساب">
+        <div class="screen">
+          <div class="wa-head"><div class="wa-av">ن</div><div><b>نورا سامي</b><small>معلمة اللغة العربية</small></div></div>
+          <div class="chat"><div class="demo-tag">نموذج توضيحي</div><div class="bubble" id="bubble"></div></div>
+        </div>
       </div>
     </div>
   </section>
@@ -384,18 +459,21 @@ footer a:hover{color:var(--light)}
           <div class="row2">
             <div>
               <label for="program">البرنامج المطلوب</label>
-              <select id="program">
-                <option value="">لم أحدد بعد</option>
-                <option>تأسيس نور البيان</option>
-              </select>
+              <select id="program"><option value="">لم أحدد بعد</option></select>
             </div>
             <div>
               <label for="pack">الباقة</label>
               <select id="pack">
                 <option value="">أي باقة / لم أقرر بعد</option>
                 <option>8 حصص شهريًا</option>
+                <option>12 حصة شهريًا</option>
+                <option>فيديوهات مسجّلة</option>
               </select>
             </div>
+          </div>
+          <div>
+            <label for="grade">السنة الدراسية <span class="opt" style="font-weight:400;color:var(--muted)">(اختياري)</span></label>
+            <select id="grade"><option value="">غير محددة</option></select>
           </div>
           <a class="btn btn-primary" id="sendBtn" href="https://wa.me/201069257145" target="_blank" rel="noopener">إرسال الطلب</a>
           <p class="form-note">يفتح واتساب برسالة الحجز جاهزة، فقط اضغط إرسال هناك.</p>
@@ -460,6 +538,7 @@ function buildUrl(){
   if($("email").value.trim())lines.push("البريد: "+$("email").value.trim());
   if($("program").value)lines.push("البرنامج: "+$("program").value);
   if($("pack").value)lines.push("الباقة: "+$("pack").value);
+  if($("grade").value)lines.push("السنة الدراسية: "+$("grade").value);
   return "https://wa.me/"+WA+"?text="+encodeURIComponent(lines.join("\n"));
 }
 function validate(){
@@ -485,7 +564,7 @@ send.addEventListener("click",e=>{
 form.addEventListener("submit",e=>{e.preventDefault();send.click()});
 
 // ===== 3D interactions =====
-const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const fine=matchMedia("(hover:hover) and (pointer:fine)").matches;
 const stage=$("stage"),hero=document.querySelector(".hero");
 if(fine&&!reduce){
@@ -504,6 +583,144 @@ if(fine&&!reduce){
     el.addEventListener("pointerleave",()=>{el.style.transform=""});
   });
 }
+
+// ===== الباقات =====
+// ضع الأسعار هنا (بالجنيه) وستظهر تلقائيًا. مثال: PRICES["live-found-8"]=600;
+const PRICES={};
+const GRADES=["رياض الأطفال KG1","رياض الأطفال KG2","الصف الأول الابتدائي","الصف الثاني الابتدائي","الصف الثالث الابتدائي","الصف الرابع الابتدائي","الصف الخامس الابتدائي","الصف السادس الابتدائي","الصف الأول الإعدادي","الصف الثاني الإعدادي","الصف الثالث الإعدادي"];
+const NAHW_GRADES=GRADES.slice(2);
+const PACKS=[
+ {id:"live-found",tab:"live",label:"حصص مباشرة – التأسيس ورياض الأطفال",title:"التأسيس ورياض الأطفال",tag:"تأسيس نور البيان",d:"الحروف والأصوات وأول الكلمات، ونبني القراءة والكتابة من الصفر.",sess:true},
+ {id:"live-prim",tab:"live",label:"حصص مباشرة – المرحلة الابتدائية",title:"المرحلة الابتدائية",tag:"لغة عربية وتربية دينية",d:"القراءة والكتابة والمنهج الدراسي بخطوات واضحة ومتابعة للواجبات.",sess:true},
+ {id:"live-prep",tab:"live",label:"حصص مباشرة – المرحلة الإعدادية",title:"المرحلة الإعدادية",tag:"لغة عربية وتربية دينية",d:"تقوية في النحو والتعبير والتربية الدينية وفق المنهج.",sess:true},
+ {id:"nahw-found",tab:"nahw",label:"النحو – تأسيس نحو",title:"تأسيس نحو",tag:"قواعد من البداية",d:"نبني فهم قواعد النحو الأساسية من الصفر قبل الدخول في المنهج.",sess:true},
+ {id:"nahw-curr",tab:"nahw",label:"النحو – شرح نحو المنهج",title:"شرح نحو المنهج",tag:"حسب السنة الدراسية",d:"شرح قواعد النحو المقررة على سنتك الدراسية مع تدريبات على كل درس.",sess:true,grade:true},
+ {id:"rec",tab:"rec",label:"فيديوهات مسجّلة",title:"باقة الفيديوهات المسجّلة",tag:"تتعلم في الوقت المناسب لك",d:"دروس مسجّلة تشاهدها في أي وقت، ومعها تدريبات ومتابعة واختبارات.",rec:true,
+   feats:["فيديو مسجّل لكل درس","تدريبات بعد كل درس","متابعة من المعلمة على مستوى الطالب","اختبارات دورية لقياس التقدّم"]}
+];
+const CHECK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>';
+const state={tab:"live",n:{},stage:"الابتدائي"};
+const priceText=(id,n)=>{const v=PRICES[id+"-"+n]??PRICES[id];return v?`${v} ج.م`:"السعر عند التواصل"};
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+
+function liveFeats(n){
+  return [n===8?"حصتان أسبوعيًا (8 حصص في الشهر)":"3 حصص أسبوعيًا (12 حصة في الشهر)","60 دقيقة للحصة","تقرير لولي الأمر بعد كل حصة","تقرير أسبوعي وشهري"];
+}
+function renderPacks(){
+  const panel=$("panel");panel.innerHTML="";
+  const list=PACKS.filter(p=>p.tab===state.tab);
+  panel.className="pk-grid"+(list.length===1?" one":list.length===2?" two":"");
+  list.forEach(p=>{
+    const n=state.n[p.id]||8;
+    const c=el("article","pcard");
+    c.appendChild(el("span","pname",p.tag));
+    c.appendChild(el("h3",null,p.title));
+    c.appendChild(el("p","d",p.d));
+    let gradeSel=null;
+    if(p.sess){
+      const seg=el("div","seg");seg.setAttribute("role","group");seg.setAttribute("aria-label","عدد الحصص");
+      [8,12].forEach(k=>{
+        const b=el("button",null,`${k} حصة شهريًا`);b.type="button";b.setAttribute("aria-pressed",n===k);
+        b.addEventListener("click",()=>{state.n[p.id]=k;renderPacks()});seg.appendChild(b);
+      });
+      c.appendChild(seg);
+      const ul=el("ul","feat");liveFeats(n).forEach(f=>ul.appendChild(el("li",null,CHECK+"<span>"+f+"</span>")));c.appendChild(ul);
+      if(p.grade){
+        const w=el("div");w.appendChild(el("label","sm","السنة الدراسية"));
+        gradeSel=el("select");gradeSel.id="g-"+p.id;
+        gradeSel.innerHTML='<option value="">اختر سنتك الدراسية</option>'+NAHW_GRADES.map(g=>`<option>${g}</option>`).join("");
+        w.appendChild(gradeSel);c.appendChild(w);
+      }
+    }
+    if(p.rec){
+      const ul=el("ul","feat");p.feats.forEach(f=>ul.appendChild(el("li",null,CHECK+"<span>"+f+"</span>")));c.appendChild(ul);
+      const w=el("div");w.appendChild(el("label","sm","المرحلة"));
+      const row=el("div","opt-row");row.style.marginTop="8px";
+      ["التأسيس","الابتدائي","الإعدادي","النحو"].forEach(st=>{
+        const b=el("button",null,st);b.type="button";b.setAttribute("aria-pressed",state.stage===st);
+        b.addEventListener("click",()=>{state.stage=st;renderPacks()});row.appendChild(b);
+      });
+      w.appendChild(row);c.appendChild(w);
+    }
+    const pr=el("div","pprice",priceText(p.id,n));
+    if(p.sess)pr.appendChild(el("small",null,"/ شهريًا"));
+    c.appendChild(pr);
+    const btn=el("button","btn btn-primary","اطلب الباقة");btn.type="button";
+    btn.addEventListener("click",()=>requestPack(p,n,gradeSel&&gradeSel.value));
+    c.appendChild(btn);
+    panel.appendChild(c);
+  });
+}
+function requestPack(p,n,grade){
+  const prog=$("program");
+  prog.value=p.label+(p.rec?" ("+state.stage+")":"");
+  if(prog.value!==p.label+(p.rec?" ("+state.stage+")":""))prog.value=p.label;
+  $("pack").value=p.rec?"فيديوهات مسجّلة":(n===8?"8 حصص شهريًا":"12 حصة شهريًا");
+  $("grade").value=grade||"";
+  sync();
+  $("book").scrollIntoView({behavior:reduce?"auto":"smooth"});
+  setTimeout(()=>$("name").focus({preventScroll:true}),500);
+}
+// تعبئة قوائم الفورم
+(function(){
+  const prog=$("program");
+  PACKS.forEach(p=>{
+    if(p.rec){["التأسيس","الابتدائي","الإعدادي","النحو"].forEach(st=>{const o=document.createElement("option");o.textContent=p.label+" ("+st+")";prog.appendChild(o)})}
+    else{const o=document.createElement("option");o.textContent=p.label;prog.appendChild(o)}
+  });
+  $("grade").insertAdjacentHTML("beforeend",GRADES.map(g=>`<option>${g}</option>`).join(""));
+})();
+document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{
+  state.tab=b.id.replace("t-","");
+  document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));
+  renderPacks();
+}));
+renderPacks();
+
+// ===== نماذج التقارير =====
+const SAMPLE={
+session:`تقرير حصة سارة 📘
+📅 الثلاثاء 17 نوفمبر
+✅ الحضور: حضرت
+⭐ المستوى في الحصة: جيد جدًا
+📖 درس اليوم: حرف النون وأشكاله
+💪 نقاط القوة: نطق الحرف واضح وسريع في التعرف عليه
+🎯 تحتاج تدريب: كتابة النون في آخر الكلمة
+📝 الواجب: صفحة 12 + قراءة 5 كلمات (للحصة القادمة)
+🔁 واجب الحصة السابقة: تم
+💬 ملاحظة: متفاعلة جدًا، شكرًا لمتابعتكم 🌷`,
+week:`تقرير الأسبوع لسارة 🗓️
+من السبت 14 إلى الجمعة 20 نوفمبر
+✅ الحضور: 2 من 2
+⭐ متوسط المستوى: جيد جدًا
+📝 الواجبات: تم 2، جزئي 0، لم يتم 0
+📖 ما تم هذا الأسبوع:
+• حرف النون وأشكاله
+• حرف الميم في أول الكلمة
+💪 أبرز نقاط القوة: النطق والتركيز
+🎯 للتركيز عليه: الكتابة في آخر الكلمة
+💬 ملاحظة: أسبوع ممتاز، استمروا على تدريب البيت 🌷`,
+month:`تقرير شهر نوفمبر لسارة 📈
+✅ الحضور: 8 من 8 حصص (100%)
+⭐ متوسط المستوى: جيد جدًا
+📊 تطور المستوى: في تحسّن ملحوظ
+📝 الواجبات: تم 7، جزئي 1، لم يتم 0
+📖 ما أتقنته هذا الشهر:
+• حروف النون والميم والباء
+• قراءة كلمات من مقطعين
+🎯 هدف الشهر القادم: الكتابة الصحيحة في آخر الكلمة
+💬 ملاحظة: ما شاء الله تقدّم جميل. لتجديد الباقة أو تغيير عدد الحصص راسلوني هنا 🌷`
+};
+const bubble=$("bubble");
+function showReport(k){
+  bubble.style.animation="none";void bubble.offsetWidth;bubble.style.animation="";
+  bubble.textContent=SAMPLE[k];
+  const t=document.createElement("time");t.textContent=k==="session"?"7:45 م":k==="week"?"الجمعة 8:00 م":"آخر الشهر 8:00 م";bubble.appendChild(t);
+}
+document.querySelectorAll(".rep-btn").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".rep-btn").forEach(x=>x.setAttribute("aria-pressed",x===b));showReport(b.dataset.r);
+}));
+showReport("session");
 </script>
 </body>
 </html>
