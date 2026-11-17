@@ -1502,7 +1502,7 @@ $("sPdf").addEventListener("click",e=>{
 });
 
 /* ---------- قفل اللوحة بالرمز السري ---------- */
-const PIN_SALT="dbc398d95055f384badac2fe686426c9",PIN_HASH="21bf72f0c3d882bbb22259014b3b4cf38e9a79d152609ada0ec9a714444c8baf",PIN_ITER=150000,TRY_KEY="noura_pin_try",TOK_KEY="noura_tok";
+const PIN_SALT="92f96dbdc2ad38d19f86900cdc7edc5e",PIN_HASH="e6e9bb9dbc1986ad7b1346bf30ef8abddab7264d0405e92d276ecdeb7767483c",PIN_ITER=150000,TRY_KEY="noura_pin_try",TOK_KEY="noura_tok";
 const app=$("tApp"),pinIn=$("tPin"),gErr=$("tGateErr"),gBtn=$("tGateBtn");
 let unlocked=false,idleT=null,tickT=null;
 try{unlocked=sessionStorage.getItem(TOK_KEY)===PIN_HASH}catch(e){}
